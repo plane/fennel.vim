@@ -19,6 +19,47 @@ setlocal noautoindent nosmartindent
 setlocal softtabstop=2 shiftwidth=2 expandtab
 setlocal indentkeys=!,o,O
 
+set lispwords=
+set lispwords+=accumulate
+set lispwords+=accumulate*
+set lispwords+=assert
+set lispwords+=assert-compile
+set lispwords+=collect
+set lispwords+=collect*
+set lispwords+=do
+set lispwords+=doto
+set lispwords+=fcollect
+set lispwords+=fcollect*
+set lispwords+=fn
+set lispwords+=global
+set lispwords+=icollect
+set lispwords+=icollect*
+set lispwords+=import-macros
+set lispwords+=import-macros*
+set lispwords+=lambda
+set lispwords+=lambda*
+set lispwords+=let
+set lispwords+=macro
+set lispwords+=macro*
+set lispwords+=macrodebug
+set lispwords+=macrodebug*
+set lispwords+=macros
+set lispwords+=match
+set lispwords+=match-try
+set lispwords+=match-try*
+set lispwords+=match-where
+set lispwords+=partial
+set lispwords+=partial*
+set lispwords+=pick-args
+set lispwords+=pick-args*
+set lispwords+=pick-values
+set lispwords+=pick-values*
+set lispwords+=set
+set lispwords+=set-forcibly!
+set lispwords+=when
+set lispwords+=with-open
+set lispwords+=with-open*
+
 if exists("*searchpairpos")
 
 	if !exists('g:fennel_maxlines')
@@ -30,7 +71,7 @@ if exists("*searchpairpos")
 	endif
 
 	if !exists('g:fennel_fuzzy_indent_patterns')
-		let g:fennel_fuzzy_indent_patterns = ['^def', '^let', '^while', '^if', '^fn$', '^var$', '^case$', '^for$', '^each$', '^local$', '^global$', '^match$', '^macro', '^lambda$']
+		let g:fennel_fuzzy_indent_patterns = ['^def', '^let', '^while', '^icollect$', '^fcollect$', '^collect$', '^accumulate$', '^fn$', '^var$', '^case$', '^for$', '^each$', '^local$', '^global$', '^match$', '^macro', '^lambda$']
 	endif
 
 	if !exists('g:fennel_fuzzy_indent_blacklist')
